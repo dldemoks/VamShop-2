@@ -1,0 +1,55 @@
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Merchant URL"
+msgstr "URL merchant (by default //payeer.com/merchant/ )"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Merchant ID"
+msgstr "ID store"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Secret key"
+msgstr "Secret key"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Comment for payment"
+msgstr "Comment for payment"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
+msgstr "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "IP filter handler payment"
+msgstr "IP filter handler payment"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Email for payment errors"
+msgstr "Email for payment errors"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "Error payment"
+msgstr "Error payment"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "Failed to make the payment through the system Payeer for the following reasons"
+msgstr "Failed to make the payment through the system Payeer for the following reasons"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - Do not match the digital signature"
+msgstr " - Do not match the digital signature"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - The payment status is not success"
+msgstr " - The payment status is not success"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - the ip address of the server is not trusted"
+msgstr " - the ip address of the server is not trusted"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "   trusted ip: "
+msgstr "   trusted ip: "
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "   ip of the current server: "
+msgstr "   ip of the current server: "

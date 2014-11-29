@@ -1,0 +1,55 @@
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Merchant URL"
+msgstr "URL мерчанта (по умолчанию //payeer.com/merchant/ )"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Merchant ID"
+msgstr "ID магазина"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Secret key"
+msgstr "Секретный ключ"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Comment for payment"
+msgstr "Комментарий к оплате"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
+msgstr "Путь до файла для журнала оплат через Payeer (например, /payeer_orders.log)"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "IP filter handler payment"
+msgstr "IP фильтр обработчика платежа"
+
+#: /plugins/payment/views/admin/payeer.ctp
+msgid "Email for payment errors"
+msgstr "Email для ошибок оплаты"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "Error payment"
+msgstr "Ошибка оплаты"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "Failed to make the payment through the system Payeer for the following reasons"
+msgstr "Не удалось провести платёж через систему Payeer по следующим причинам"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - Do not match the digital signature"
+msgstr " - Не совпадают цифровые подписи"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - The payment status is not success"
+msgstr " - Cтатус платежа не является success"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - the ip address of the server is not trusted"
+msgstr " - ip-адрес сервера не является доверенным"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "   trusted ip: "
+msgstr "   доверенные ip: "
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid "   ip of the current server: "
+msgstr "   ip текущего сервера: "
