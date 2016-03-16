@@ -1,6 +1,6 @@
 #: /plugins/payment/views/admin/payeer.ctp
 msgid "Merchant URL"
-msgstr "URL мерчанта (по умолчанию //payeer.com/merchant/ )"
+msgstr "URL мерчанта (по умолчанию https://payeer.com/merchant/)"
 
 #: /plugins/payment/views/admin/payeer.ctp
 msgid "Merchant ID"
@@ -9,10 +9,6 @@ msgstr "ID магазина"
 #: /plugins/payment/views/admin/payeer.ctp
 msgid "Secret key"
 msgstr "Секретный ключ"
-
-#: /plugins/payment/views/admin/payeer.ctp
-msgid "Comment for payment"
-msgstr "Комментарий к оплате"
 
 #: /plugins/payment/views/admin/payeer.ctp
 msgid "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
@@ -53,3 +49,11 @@ msgstr "   доверенные ip: "
 #: /plugins/payment/controller/payeercontroller.php
 msgid "   ip of the current server: "
 msgstr "   ip текущего сервера: "
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - undefined order id"
+msgstr " - несуществующий ордер"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - wrong amount"
+msgstr " - неправильная сумма"

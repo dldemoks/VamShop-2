@@ -11,10 +11,6 @@ msgid "Secret key"
 msgstr "Secret key"
 
 #: /plugins/payment/views/admin/payeer.ctp
-msgid "Comment for payment"
-msgstr "Comment for payment"
-
-#: /plugins/payment/views/admin/payeer.ctp
 msgid "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
 msgstr "Path to file to log payments through Payeer (for example, /payeer_orders.log)"
 
@@ -53,3 +49,11 @@ msgstr "   trusted ip: "
 #: /plugins/payment/controller/payeercontroller.php
 msgid "   ip of the current server: "
 msgstr "   ip of the current server: "
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - undefined order id"
+msgstr " - undefined order id"
+
+#: /plugins/payment/controller/payeercontroller.php
+msgid " - wrong amount"
+msgstr " - wrong amount"
