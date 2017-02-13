@@ -57,7 +57,3 @@ msgstr " - несуществующий ордер"
 #: /plugins/payment/controller/payeercontroller.php
 msgid " - wrong amount"
 msgstr " - неправильная сумма"
-
-#: /plugins/payment/controller/payeercontroller.php
-msgid " - order already paid"
-msgstr " - заказ уже оплачен"

@@ -57,7 +57,3 @@ msgstr " - undefined order id"
 #: /plugins/payment/controller/payeercontroller.php
 msgid " - wrong amount"
 msgstr " - wrong amount"
-
-#: /plugins/payment/controller/payeercontroller.php
-msgid " - order already paid"
-msgstr " - order already paid"
