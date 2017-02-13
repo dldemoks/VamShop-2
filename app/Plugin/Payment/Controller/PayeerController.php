@@ -176,17 +176,17 @@ class PayeerController extends PaymentAppController
 			
 			$log_text = 
 			"--------------------------------------------------------\n" .
-			"operation id		" . $_POST['m_operation_id'] . "\n" .
-			"operation ps		" . $_POST['m_operation_ps'] . "\n" .
-			"operation date		" . $_POST['m_operation_date'] . "\n" .
-			"operation pay date	" . $_POST['m_operation_pay_date'] . "\n" .
-			"shop				" . $_POST['m_shop'] . "\n" .
-			"order id			" . $_POST['m_orderid'] . "\n" .
-			"amount				" . $_POST['m_amount'] . "\n" .
-			"currency			" . $_POST['m_curr'] . "\n" .
-			"description		" . base64_decode($_POST['m_desc']) . "\n" .
-			"status				" . $_POST['m_status'] . "\n" .
-			"sign				" . $_POST['m_sign'] . "\n\n";
+			"operation id       " . $_POST['m_operation_id'] . "\n" .
+			"operation ps       " . $_POST['m_operation_ps'] . "\n" .
+			"operation date     " . $_POST['m_operation_date'] . "\n" .
+			"operation pay date " . $_POST['m_operation_pay_date'] . "\n" .
+			"shop               " . $_POST['m_shop'] . "\n" .
+			"order id           " . $_POST['m_orderid'] . "\n" .
+			"amount             " . $_POST['m_amount'] . "\n" .
+			"currency           " . $_POST['m_curr'] . "\n" .
+			"description        " . base64_decode($_POST['m_desc']) . "\n" .
+			"status             " . $_POST['m_status'] . "\n" .
+			"sign               " . $_POST['m_sign'] . "\n\n";
 			
 			$log_file = $pathlog;
 			
@@ -254,12 +254,25 @@ class PayeerController extends PaymentAppController
 				else
 				{
 					$order_amount = number_format($order['Order']['total'], 2, '.', '');
+					$payment_method = $this->PaymentMethod->find('first', array(
+						'conditions' => array(
+							'alias' => $this->module_name
+						)
+					));
 					
 					// проверка суммы
 				
 					if ($_POST['m_amount'] != $order_amount)
 					{
 						$message .= __d('payeer',' - wrong amount') . "\n";
+						$err = true;
+					}
+					
+					// проверка оплачен ли заказ
+					
+					if ($order['Order']['order_status_id'] == $payment_method['PaymentMethod']['order_status_id'])
+					{
+						$message .= __d('payeer',' - order already paid') . "\n";
 						$err = true;
 					}
 					
@@ -270,23 +283,23 @@ class PayeerController extends PaymentAppController
 						switch ($_POST['m_status'])
 						{
 							case 'success':
-								$payment_method = $this->PaymentMethod->find('first', array(
-									'conditions' => array(
-										'alias' => $this->module_name
-									)
-								));
+								
 								$order_data = $this->Order->find('first', array(
 									'conditions' => array(
 										'Order.id' => $_POST['m_orderid']
 									)
 								));
+								
 								$order_data['Order']['order_status_id'] = $payment_method['PaymentMethod']['order_status_id'];
 								$this->Order->save($order_data);
+								
 								break;
 								
 							default:
+							
 								$message .= __d('payeer',' - The payment status is not success') . "\n";
 								$err = true;
+								
 								break;
 						}
 					}
