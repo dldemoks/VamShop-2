@@ -243,8 +243,8 @@ class PayeerController extends PaymentAppController
 			if (!$err)
 			{
 				// загрузка заказа
-
-				$order = $this->Order->read(null, $_POST['m_orderid']);
+				$order_id = preg_replace('/[^a-zA-Z0-9_-]/', '', substr($_POST['m_orderid'], 0, 32));
+				$order = $this->Order->read(null, $order_id);
 				
 				if (!$order)
 				{
@@ -281,7 +281,7 @@ class PayeerController extends PaymentAppController
 								{
 									$order_data = $this->Order->find('first', array(
 										'conditions' => array(
-											'Order.id' => $_POST['m_orderid']
+											'Order.id' => $order_id
 										)
 									));
 									
