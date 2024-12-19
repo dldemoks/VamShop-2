@@ -1,9 +1,9 @@
 VamShop
 ======
-Модуль оплаты Payeer
+Payment module Payeer
 
-Для установки модуля скачайте архив.
-Скопируйте папку app в корень сайта с заменой файлов и папок.
-Далее следуйте инструкции.
+To install the module, download the archive.
+Copy the app folder to the root of the site with the replacement of files and folders.
+Then follow the instructions.
 
-Поддержка версии CMS VamShop 2.x
+Support for CMS VamShop 2.x
